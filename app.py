@@ -5,8 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return redirect("https://breq.dev/demos/vibrance/landing.html"
-                    "?host=vibrance.breq.dev")
+    return redirect("https://breq.dev/demos/vibrance/")
 
 
 if __name__ == "__main__":
