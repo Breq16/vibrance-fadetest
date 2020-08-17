@@ -1,5 +1,6 @@
 import os
 import threading
+import logging
 
 from flask import Flask, redirect
 import vibrance
@@ -9,6 +10,7 @@ manager.addScript("fadetest.py")
 manager.chooseScript(manager.scripts["Fadetest"])
 
 manager.connect(os.environ.get("RELAY_IP"), os.environ.get("RELAY_PSK"))
+logging.getLogger("vibrance.controller.tolerant_socket").setLevel(logging.INFO)
 
 app = Flask(__name__)
 
